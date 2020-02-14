@@ -1,0 +1,7 @@
+*.o
+*.a
+*.kdev4
+*.vscode
+
+# various executables
+list_test
