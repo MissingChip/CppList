@@ -23,6 +23,8 @@ public:
     T& recent();
     int recent_idx();
     int size();
+    
+    T* to_array();
     vector<T> to_vector();
     string to_string();
 //private:

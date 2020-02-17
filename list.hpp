@@ -183,8 +183,29 @@ template<class T> int List<T>::size()
     return length;
 }
 
+template<class T> T* List<T>::to_array()
+{
+    /*
+     * returns a pointer to memory
+     * created with the `new` operator
+     * (elements equal to those in list)
+     * 
+     * IMPORTANT: array must be deallocated with `delete`
+     */
+    int b = current_i;
+    T* out = new T[length];
+    for(int i=0;i<length;i++){
+        out[i] = seek(i);
+    }
+    seek(b);
+    return out;
+}
 template<class T> std::vector<T> List<T>::to_vector()
 {
+    /*
+     * returns a vector of specified type
+     * (elements equal to those in list)
+     */
     int b = current_i;
     std::vector<T> out;
     for(int i=0;i<length;i++){
@@ -195,6 +216,10 @@ template<class T> std::vector<T> List<T>::to_vector()
 }
 template<class T> string List<T>::to_string()
 {
+    /*
+     * returns a string representation
+     * of the list
+     */
     int b = current_i;
     string out = "[";
     if(length>0){
