@@ -25,6 +25,7 @@ public:
     int size();
     
     T* to_array();
+    void to_array(T*);
     vector<T> to_vector();
     string to_string();
 //private:

@@ -183,6 +183,21 @@ template<class T> int List<T>::size()
     return length;
 }
 
+template<class T> void List<T>::to_array(T* out)
+{
+    /*
+     * fills from pointer
+     * (elements equal to those in list)
+     * 
+     * IMPORTANT: memory must have allocated enough space for elements
+     */
+    int b = current_i;
+    for(int i=0;i<length;i++){
+        out[i] = seek(i);
+    }
+    seek(b);
+    return out;
+}
 template<class T> T* List<T>::to_array()
 {
     /*
