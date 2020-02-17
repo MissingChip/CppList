@@ -41,4 +41,9 @@ public:
     Node* last;
 };
 
+#if __has_include("list.hpp")
 #include "list.hpp"
+#endif
+#if __has_include("List/list.hpp")
+#include "List/list.hpp"
+#endif
