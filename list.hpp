@@ -196,7 +196,6 @@ template<class T> void List<T>::to_array(T* out)
         out[i] = seek(i);
     }
     seek(b);
-    return out;
 }
 template<class T> T* List<T>::to_array()
 {
