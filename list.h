@@ -24,6 +24,10 @@ public:
     int recent_idx();
     int size();
     
+    T remove();
+    T remove(int i);
+    T remove(int a, int b);
+    
     T* to_array();
     void to_array(T*);
     vector<T> to_vector();

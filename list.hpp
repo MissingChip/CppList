@@ -182,6 +182,25 @@ template<class T> int List<T>::size()
 {
     return length;
 }
+template<class T> T List<T>::remove()
+{
+    Node* cp = current;
+    T t = current->in;
+    seek(current_i-1);
+    delete current->next;
+    current->next = cp;
+    seek(current_i+1);
+    return t;
+}
+template<class T> T List<T>::remove(int i)
+{
+    int c = current_i;
+    Node* cp = current;
+    seek(i-1);
+    delete current->next;
+    current->next = cp;
+    seek(c);
+}
 
 template<class T> void List<T>::to_array(T* out)
 {
