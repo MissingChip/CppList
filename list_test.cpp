@@ -44,4 +44,11 @@ int main(void){
     printf("\n");
     printf("%s\n", to_string(v).c_str());
     printf("%s\n", l.to_string().c_str());
+    l.remove();
+    printf("%s\n", l.to_string().c_str());
+    l.remove(2);
+    printf("%s\n", l.to_string().c_str());
+    l.remove(2,4);
+    printf("%s\n", l.to_string().c_str());
+    
 }
