@@ -1,7 +1,7 @@
 
 lib_d = list.h list.hpp list.cpp
 
-library: ../liblist.a ../list.h
+library: ../liblist.a
 
 test: $(lib_d) list_test.cpp
 	g++ -o list_test list_test.cpp -L. -llist
